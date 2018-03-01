@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="養鴿紀錄"
+        app:titleTextColor="#ffffff" />
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_below="@id/toolbar">
+
+
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="5dp"
+
+
+        card_view:contentPadding="15dp"
+        card_view:cardCornerRadius="4dp"
+
+        app:cardBackgroundColor="@color/cardBackground"
+        app:contentPadding="15dp"
+
+        app:cardElevation="5dp"
+
+        app:ignore="NamespaceTypo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_marginBottom="5dp">
+
+                <com.example.frank.jyanfapa.CircleImageView
+                    android:id="@+id/dove_detail_picture"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/photo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/dove_detail_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="鴿子名稱"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/dove_detail_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:singleLine="true"
+                        android:text="群組1"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/dove_detail_circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:singleLine="true"
+                        android:text="環號：12345678"
+                        android:textSize="15sp" />
+
+                    <RatingBar
+                        android:id="@+id/dove_detail_ratingbar"
+                        style="@style/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginBottom="5dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/show_text_bgcolor"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:padding="5dp"
+                            android:text="生日" />
+
+                        <TextView
+                            android:id="@+id/dove_detail_birth"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="文字" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/show_text_bgcolor"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:padding="5dp"
+                            android:text="來源" />
+
+                        <TextView
+                            android:id="@+id/dove_detail_source"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="文字" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/show_text_bgcolor"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:padding="5dp"
+                            android:text="眼砂" />
+
+                        <TextView
+                            android:id="@+id/dove_detail_eye"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="文字" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/show_text_bgcolor"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:padding="5dp"
+                            android:text="羽色" />
+
+                        <TextView
+                            android:id="@+id/dove_detail_feather"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="文字" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/show_text_bgcolor">
+
+
+                    <TextView
+                        android:id="@+id/dove_detail_ps"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:padding="5dp"
+                        android:text="備註" />
+
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:orientation="horizontal">
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:app="http://schemas.android.com/tools"
+
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="5dp"
+
+
+
+            card_view:contentPadding="15dp"
+            card_view:cardCornerRadius="4dp"
+
+            app:cardBackgroundColor="@color/cardBackground"
+            app:contentPadding="15dp"
+
+            app:cardElevation="5dp"
+
+            app:ignore="NamespaceTypo">
+
+
+            <LinearLayout
+                android:id="@+id/dove_detail_father_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.example.frank.jyanfapa.CircleImageView
+                    android:id="@+id/dove_detail_father_picture"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+
+                    android:src="@drawable/photo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/show_text_bgcolor"
+                    android:gravity="center"
+                    android:text="父親"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dove_detail_father"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+                    android:text="鴿子名稱"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/dove_detail_father_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="環號：12345678"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+           </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:orientation="horizontal">
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:app="http://schemas.android.com/tools"
+
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_margin="5dp"
+
+
+            card_view:contentPadding="15dp"
+            card_view:cardCornerRadius="4dp"
+
+            app:cardBackgroundColor="@color/cardBackground"
+            app:contentPadding="15dp"
+
+            app:cardElevation="5dp"
+
+            app:ignore="NamespaceTypo">
+
+
+            <LinearLayout
+                android:id="@+id/dove_detail_mother_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.example.frank.jyanfapa.CircleImageView
+                    android:id="@+id/dove_detail_mother_picture"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+
+                    android:src="@drawable/photo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/show_text_bgcolor"
+                    android:gravity="center"
+                    android:text="母親"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dove_detail_mother"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+                    android:text="鴿子名稱"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/dove_detail_mother_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="環號：12345678"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
+</RelativeLayout>

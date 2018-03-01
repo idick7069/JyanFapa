@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:title="新增鴿子資料"
+        app:titleTextColor="#ffffff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/appbar_background_with_dash"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <com.example.frank.jyanfapa.CircleImageView
+            android:id="@+id/new_dove_picture"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/photo">
+
+        </com.example.frank.jyanfapa.CircleImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <EditText
+                android:id="@+id/new_dove_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:background="@null"
+                android:ems="10"
+                android:hint="請輸入鴿名"
+                android:inputType="textPersonName"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/new_dove_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:background="@null"
+                android:ems="10"
+                android:hint="請輸入環號"
+                android:inputType="text"
+                android:textColor="@android:color/secondary_text_dark" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <ListView
+            android:id="@+id/new_dove_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </ListView>
+    <!--</ScrollView>-->
+
+</LinearLayout>

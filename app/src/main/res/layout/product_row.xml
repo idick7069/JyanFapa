@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="75dp">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_thumb"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        fresco:placeholderImage="@drawable/com_facebook_tooltip_blue_xout" />
+
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/img_thumb"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="TextView" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/text_productID"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignEnd="@+id/text_desc"-->
+        <!--android:layout_alignRight="@+id/text_desc"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:text="TextView" />-->
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_thumb"
+        android:layout_toEndOf="@+id/img_thumb"
+        android:layout_toRightOf="@+id/img_thumb"
+        android:textColor="#9CF"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_title"
+        android:layout_alignStart="@+id/text_title"
+        android:layout_below="@+id/text_title"
+        android:textSize="12sp" />
+
+</RelativeLayout>

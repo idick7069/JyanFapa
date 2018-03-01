@@ -1,0 +1,24 @@
+<tabs>
+    <tab
+        id="@+id/tab_bird"
+        icon="@drawable/ic_dove"
+        title="我的鴿子"
+        barColorWhenSelected="#ffffff"
+        badgeHidesWhenActive="false"
+        badgeBackgroundColor="#FF0000"/>
+    <tab
+        id="@+id/tab_profile"
+        icon="@drawable/ic_profile"
+        title="個人資料"
+        barColorWhenSelected="#ffffff"/>
+    <tab
+        id="@+id/tab_calendar"
+        icon="@drawable/ic_calendar"
+        title="行事曆"
+        barColorWhenSelected="#ffffff"/>
+    <tab
+        id="@+id/tab_product"
+        icon="@drawable/ic_shopping_car"
+        title="購物目錄"
+        barColorWhenSelected="#ffffff"/>
+</tabs>
